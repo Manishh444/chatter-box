@@ -7,9 +7,9 @@ dotenv.config();
 app.get("/", (req, res) => {
   res.send("Welcome to Chatter-box");
 });
-// app.get("/api/chat", (req, res) => {
-//   res.send(chats);
-// });
+app.get("/api/chat", (req, res) => {
+  res.send(chats);
+});
 // the adress below is specifying parameter for request object with colon
 app.get("/api/chat/:id", (req, res) => {
   const singleChat = chats.find((c) => c._id === req.params.id);
